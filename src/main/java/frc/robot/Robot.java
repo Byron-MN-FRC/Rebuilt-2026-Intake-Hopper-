@@ -28,7 +28,7 @@ public class Robot extends TimedRobot {
 
     private Command m_autonomousCommand;
 
-    private RobotContainer m_robotContainer;
+    static public RobotContainer m_robotContainer;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -41,6 +41,11 @@ public class Robot extends TimedRobot {
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);
         enableLiveWindowInTest(true);
     }
+
+    public static RobotContainer getInstance(){
+        return m_robotContainer;
+    }
+
 
     /**
     * This function is called every robot packet, no matter the mode. Use this for items like
