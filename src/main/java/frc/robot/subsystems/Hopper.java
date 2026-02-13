@@ -75,7 +75,7 @@ public class Hopper extends SubsystemBase {
         
 
         hopperLeftSolenoid = new DoubleSolenoid(20, PneumaticsModuleType.REVPH,12,11);
-        hopperRightSolenoid = new DoubleSolenoid(20, PneumaticsModuleType.REVPH,14,15);
+        //hopperRightSolenoid = new DoubleSolenoid(20, PneumaticsModuleType.REVPH,14,15);
         hopperExtendSwitch = new DigitalInput(0);
         addChild("hopperExtendSwitch", hopperExtendSwitch);
 
@@ -86,7 +86,7 @@ public class Hopper extends SubsystemBase {
         isExtending = false;
 
         hopperLeftSolenoid.set(DoubleSolenoid.Value.kReverse);
-        hopperRightSolenoid.set(DoubleSolenoid.Value.kReverse);
+        //hopperRightSolenoid.set(DoubleSolenoid.Value.kReverse);
     }
 
     @Override
@@ -174,7 +174,7 @@ public class Hopper extends SubsystemBase {
              isExtending = true;
           //    if (Robot.getInstance().ph.getPressure(0) >= 45){
                 hopperLeftSolenoid.set(DoubleSolenoid.Value.kForward);
-                hopperRightSolenoid.set(DoubleSolenoid.Value.kForward);
+                //hopperRightSolenoid.set(DoubleSolenoid.Value.kForward);
                 System.out.println("Extending");
           //    }
          //}
@@ -184,14 +184,14 @@ public class Hopper extends SubsystemBase {
     public void setHopperRetract() {
         isExtending = false;
         hopperLeftSolenoid.set(DoubleSolenoid.Value.kReverse);
-        hopperRightSolenoid.set(DoubleSolenoid.Value.kReverse);
+        //hopperRightSolenoid.set(DoubleSolenoid.Value.kReverse);
         System.out.println("Retracting");
     }
     
     public void retractingHopperForLockdown() {
         isExtending = false;
         hopperLeftSolenoid.set(DoubleSolenoid.Value.kReverse);
-        hopperRightSolenoid.set(DoubleSolenoid.Value.kReverse);
+        //hopperRightSolenoid.set(DoubleSolenoid.Value.kReverse);
     }
 
     public boolean isHopperExtended() {
