@@ -4,12 +4,12 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.Hopper;
 
-public class autonIntake extends Command {
+public class AutonIntakeCommand extends Command {
     private final Hopper m_hopper;
     private final Timer m_timer = new Timer();
     private final double m_duration;
 
-    public autonIntake(Hopper hopper, double duration) {
+    public AutonIntakeCommand(Hopper hopper, double duration) {
         m_hopper = hopper;
         m_duration = duration;
         addRequirements(m_hopper);
